@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
-    <img alt="Preço certo" src="./assets/logo.png">
+    <router-view></router-view>
   </div>
 </template>
 
