@@ -30,7 +30,7 @@
       <div class="box is-flex is-justify-content-space-between">
         <div class="ml-4">
           <p>
-            Mostrar 50 de 5000 Produtos
+            Mostrando de 1 até {{ total > 50 ? 50 : total}} de {{total}} Produtos
           </p>
         </div>
         <div class="mr-4">
@@ -56,77 +56,25 @@ export default {
   components: {
     TableRow
   },
+  async created(){
+    await this.$http.get('mock-data/products.json')
+    .then((response)=> {
+      const { rows, total, previous, next } = response.data
+      this.data = rows
+      this.total = total
+      this.previous = previous
+      this.next = next
+    }).catch((err)=>{
+      console.log(err)
+    })
+  },
   data(){
     return{
       input: false,
-      data:[
-        {id: 1, product: 'feijão', cust: 5.00, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 4, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 2, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10},
-        {id: 3, product: 'feijão', cust: 5, freight: 120, margin: 12, finalPrice: 10}
-      ],
-      columns: [
-        {
-          field: 'id',
-          label: 'Cod',
-          width: '100',
-          numeric: true,
-          headerClass:"is-dark"
-        },
-        {
-          field: 'product',
-          label: 'Produto',
-          centered: true,
-          headerClass:"is-dark"
-        },
-        {
-          field: 'cust',
-          label: 'Custo',
-          centered: true,
-          headerClass:"is-dark"
-        },
-        {
-          field: 'freight',
-          label: 'Frete',
-          centered: true,
-          headerClass:"is-dark"
-        },
-        {
-          field: 'margin',
-          label: 'Margem',
-          centered: true,
-          headerClass:"is-dark"
-        },
-        {
-          field: 'finalPrice',
-          label: 'Preço Final',
-          centered: true,
-          headerClass:"is-dark"
-        }
-      ]
+      data:[ ],
+      total: 0,
+      previous:0,
+      next: null
     }
   }
 }

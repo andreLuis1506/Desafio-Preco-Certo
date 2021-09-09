@@ -3,17 +3,31 @@
     <th>
       <input type="checkbox">
     </th>
-    <th>{{data.id}}</th>
+    <th>{{data.code}}</th>
     <th>
-      <p>{{data.product}}</p>
+      <p>{{data.name}}</p>
     </th>
     <th>
-      <p v-show="!isEditable" @click="isEditable = !isEditable" >R$ {{data.cust}}</p>
+      <p v-show="!isEditable" @click="isEditable = !isEditable" >R$ {{data.cost}}</p>
       <input v-show="isEditable" type="number"  v-model="data.cust" @input="updatePrice">
     </th>
-    <th>R${{data.freight}}</th>
-    <th>R${{data.margin}} </th>
-    <th>R${{data.finalPrice}}</th>
+    <th>
+      <p>
+        R${{data.south_shipping}}
+      </p>
+      <p>
+        R${{data.north_shipping}}
+      </p>
+    </th>
+    <th>
+      <p>
+        R${{data.south_shipping}} <strong class="ml-4">52%</strong> 
+      </p>
+      <p>
+        R${{data.north_shipping}} <strong class="ml-4">11%</strong> 
+      </p>
+    </th>
+    <th>R${{data.price}}</th>
     <th> 
       <b-button size="is-small">Enviar preço</b-button>
     </th>
