@@ -1,7 +1,12 @@
 <template>
   <div >
-    <div class="container my-6">
-      <h2 class="title">Formação de preços</h2>
+    <div class="container my-6 border">
+      <div class="columns">
+        <div class="column is-flex is-4">
+          <h2 class="title">Formação de preços</h2>
+          <b-tag type="is-warning">Beta</b-tag>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="columns is-vcentered is-variable is-1">
