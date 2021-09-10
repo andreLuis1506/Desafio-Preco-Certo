@@ -10,7 +10,17 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { 
+  faUserCircle, 
+  faBell, 
+  faAngleDown, 
+  faAngleUp, 
+  faFilter, 
+  faChartLine, 
+  faSearch,
+  faArrowRight,
+  faArrowLeft,  
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.prototype.$http = Axios
@@ -21,7 +31,7 @@ Vue.use(Buefy,{
   defaultContainerElement: '#content',}
 )
 
-library.add(faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, faSearch)
+library.add(faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, faSearch, faArrowRight, faArrowLeft)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

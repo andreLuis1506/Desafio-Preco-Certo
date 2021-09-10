@@ -34,7 +34,22 @@
           </p>
         </div>
         <div class="mr-4">
-          Paginação
+          <div class="control is-flex is-justify-content-space-around ">
+            <b-button class="mr-4"
+              tag="router-link"
+              to=""
+              :disabled='next == null ? true : false '
+            >
+              <font-awesome-icon icon="arrow-left"></font-awesome-icon>
+            </b-button>
+            <b-button
+              tag="router-link"
+              to=""
+              :disabled='previous == null ? true : false '
+            >
+              <font-awesome-icon icon="arrow-right" ></font-awesome-icon>
+            </b-button>
+          </div>
         </div>
       </div>
     </div>
@@ -63,7 +78,7 @@ export default {
     return{
       data:[ ],
       total: 0,
-      previous:0,
+      previous:null,
       next: null,
       editing: {}
     }
