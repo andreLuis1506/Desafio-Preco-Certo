@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr class="is-size-7">
     <th>
       <input type="checkbox">
     </th>
