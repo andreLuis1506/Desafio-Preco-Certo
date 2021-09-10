@@ -86,6 +86,12 @@ export default {
       await this.$http.patch(`products/${item.id}`, {data: item})
       .then(() =>{
         this.fetchData()
+        this.$buefy.toast.open({
+          duration: 2000,
+          message: 'Custo atualzado',
+          position: 'is-top-right',
+          type: 'is-success'
+        })
       })
       .catch((err)=>{
         console.log(err)
