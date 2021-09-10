@@ -4,6 +4,8 @@ import router from "./router";
 
 import Axios from 'axios'
 
+import './server'
+
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 
@@ -12,7 +14,7 @@ import { faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, fa
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.prototype.$http = Axios
-Axios.defaults.baseURL = '/'
+Axios.defaults.baseURL = 'https://sys.precocerto.co/api/'
 
 Vue.use(Buefy,{
   defaultIconPack: 'fa',
