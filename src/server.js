@@ -41,6 +41,16 @@ new Server({
     })
   },
   routes() {
-    
+    this.get('https://sys.precocerto.co/api/products', (schema) => {
+
+      const data ={
+        total: schema.db.products.length,
+        next: schema.db.next[0].next,
+        previous: schema.db.previous[0].previous,
+        rows: schema.db.products
+      }
+
+      return data
+    })
   }
 })
