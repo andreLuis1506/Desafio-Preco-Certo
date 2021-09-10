@@ -6,6 +6,13 @@
           class="image"
           src="../assets/logo.png"
         />
+        <!-- <b-image
+          :responsive="true"
+          :src="require('@/assets/logo.svg')"
+          ratio="40by30"
+        > -->
+          
+        <!-- </b-image> -->
       </b-navbar-item>
     </template>
     <template #start>
@@ -92,6 +99,13 @@
     </template>
   </b-navbar>
 </template>
+
+<style>
+  .log{
+    width: 417px;
+    height: 120px;
+  }
+</style>
 
 <script>
 export default {
