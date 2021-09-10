@@ -55,8 +55,11 @@ new Server({
     })
 
     this.patch('https://sys.precocerto.co/api/products/:id', (schema, request) =>{
-      let newProduct = JSON.parse(request.requestBody).data
       const {id} = request.params
+      const {cost} = JSON.parse(request.requestBody).data
+
+      let newProduct = schema.db.products.find(id)
+      newProduct.cost = cost
 
       newProduct.price = Number.parseFloat(newProduct.cost) + Number.parseFloat(newProduct.north_shipping) 
       newProduct.price = Number.parseFloat(newProduct.price).toFixed(2)

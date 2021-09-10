@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody >
-          <TableRow v-for="item in data" :key="item.id" :data="item" @submit="updateCost(item)" />
+          <TableRow v-for="(item, index) in data" :key="item.id" :data="item" @submit="updateCost(item,index)" />
         </tbody>
       </table>
     </div>
@@ -96,11 +96,11 @@ export default {
           console.log(err)
         })
     },
-    async updateCost(item){
+    async updateCost(item,index){
+      await this.$http.patch(`products/${item.id}`, {data: {cost: item.cost}})
+      .then((response) =>{
+        this.$set(this.data,index, response.data)
 
-      await this.$http.patch(`products/${item.id}`, {data: item})
-      .then(() =>{
-        this.fetchData()
         this.$buefy.toast.open({
           duration: 2000,
           message: 'Custo atualzado',
