@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody >
-          <TableRow v-for="item in data" :key="item.id" :data="item" />
+          <TableRow v-for="item in data" :key="item.id" :data="item" @submit="updateCost(item)" />
         </tbody>
       </table>
     </div>
@@ -57,25 +57,40 @@ export default {
     TableRow
   },
   async created(){
-    await this.$http.get('mock-data/products.json')
-    .then((response)=> {
-      const { rows, total, previous, next } = response.data
-      this.data = rows
-      this.total = total
-      this.previous = previous
-      this.next = next
-    }).catch((err)=>{
-      console.log(err)
-    })
+    await this.fetchData()
   },
   data(){
     return{
-      input: false,
       data:[ ],
       total: 0,
       previous:0,
-      next: null
+      next: null,
+      editing: {}
     }
+  },
+  methods:{
+    async fetchData(){
+      await this.$http.get('products/')
+        .then((response)=> {
+          const { rows, total, previous, next } = response.data
+          this.data = rows
+          this.total = total
+          this.previous = previous
+          this.next = next
+        }).catch((err)=>{
+          console.log(err)
+        })
+    },
+    async updateCost(item){
+
+      await this.$http.patch(`products/${item.id}`, {data: item})
+      .then(() =>{
+        this.fetchData()
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+    },
   }
 }
 </script>

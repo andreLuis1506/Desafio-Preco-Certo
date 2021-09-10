@@ -41,7 +41,8 @@ new Server({
     })
   },
   routes() {
-    this.get('https://sys.precocerto.co/api/products', (schema) => {
+
+    this.get('https://sys.precocerto.co/api/products/', (schema) => {
 
       const data ={
         total: schema.db.products.length,
@@ -51,6 +52,16 @@ new Server({
       }
 
       return data
+    })
+
+    this.patch('https://sys.precocerto.co/api/products/:id', (schema, request) =>{
+      const product = JSON.parse(request.requestBody).data
+
+      let newProduct = schema.db.products.update(product.id, product)
+      
+      newProduct.price = Number.parseFloat(newProduct.cost) + Number.parseFloat(newProduct.north_shipping) 
+      newProduct.price = Number.parseFloat(newProduct.price).toFixed(2)
+      return newProduct
     })
   }
 })

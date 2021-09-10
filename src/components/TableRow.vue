@@ -9,7 +9,7 @@
     </th>
     <th>
       <p v-show="!isEditable" @click="isEditable = !isEditable" >R$ {{data.cost}}</p>
-      <input v-show="isEditable" type="number"  v-model="data.cust" @input="updatePrice">
+      <input v-show="isEditable" type="number"  v-model="data.cost" @input="updateCost">
     </th>
     <th>
       <p>
@@ -55,13 +55,16 @@ export default {
     }
   },
   methods:{
-    updatePrice(){
-      console.log('digitou');
-      clearTimeout(this.updatePrice.timeout);
+    updateCost(){
+      clearTimeout(this.updateCost.timeout);
 
-      this.updatePrice.timeout = setTimeout( () => {
+      this.updateCost.timeout = setTimeout( () => {
+        this.submit()
         this.isEditable = false
         }, 1000);
+    },
+    submit(){
+      this.$emit('submit')
     }
   }
 }
