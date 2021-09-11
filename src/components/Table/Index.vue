@@ -21,17 +21,8 @@
           <TableRow v-for="(item, index) in data" :key="item.id" :data="item" @submit="updateCost(item,index)" />
         </tbody>
       </table>
-    </div>
-    <div class="container">
-      <div class="box is-flex is-justify-content-space-between">
-        <div class="ml-4">
-          <p>
-            Mostrando de 1 até {{ total > 50 ? 50 : total}} de {{total}} Produtos
-          </p>
-        </div>
-        <Pagination />
-      </div>
-    </div>
+    </div>  
+    <Pagination />
   </section>
 </template>
 
