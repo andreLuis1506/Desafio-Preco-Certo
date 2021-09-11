@@ -18,8 +18,8 @@ import {
   faFilter, 
   faChartLine, 
   faSearch,
-  faArrowRight,
-  faArrowLeft,  
+  faChevronRight,
+  faChevronLeft  
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -31,7 +31,7 @@ Vue.use(Buefy,{
   defaultContainerElement: '#content',}
 )
 
-library.add(faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, faSearch, faArrowRight, faArrowLeft)
+library.add(faUserCircle, faBell, faAngleDown, faAngleUp, faFilter, faChartLine, faSearch, faChevronRight, faChevronLeft)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

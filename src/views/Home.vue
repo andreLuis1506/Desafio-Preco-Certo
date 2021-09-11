@@ -124,7 +124,7 @@
 </style>
 
 <script>
-import Table from '../components/Table'
+import Table from '../components/Table/Index'
 export default {
   name: 'Home',
   components: {
