@@ -7,7 +7,7 @@
     </div>
     <div class="table-container mt-4 scroll">
       <table class="table is-fullwidth ">
-        <thead class="has-background-dark">
+        <thead class="has-background-black">
           <tr>
             <th class="has-text-white-ter"> 
               <input type="checkbox">

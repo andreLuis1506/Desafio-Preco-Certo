@@ -57,7 +57,7 @@
           </b-field>
         </div>
         <div class="column is-flex is-justify-content-flex-end">
-          <b-button class="is-flex" type="is-dark">
+          <b-button class="is-flex" type="is-light">
             <font-awesome-icon icon="filter" />
             Filtrar
           </b-button>
@@ -99,12 +99,15 @@
 .tag-position{
   position: relative;
   top:-1rem; right:2rem;
+  font-weight: 900;
 }
 .b2w-icon{
+  position: relative;
+  top: -0.8rem; left: -1rem;
   border-radius: 50%;
   background-color:#07EAC3;
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 3rem;
+  width: 3rem;
 }
 .b2w-primary-font{
   font-weight: 900;

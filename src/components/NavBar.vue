@@ -1,5 +1,5 @@
 <template>
-  <b-navbar wrapper-class="container" :fixed-top="true" type="is-dark">
+  <b-navbar wrapper-class="container" :fixed-top="true" type="is-primary">
     <template #brand>
       <b-navbar-item>
         <img 
