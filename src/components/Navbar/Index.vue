@@ -9,16 +9,16 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item>
+      <b-navbar-item >
         <font-awesome-icon icon="chart-line"></font-awesome-icon>
-        Dashboard
+        DASHBOARD
       </b-navbar-item>
-      <b-navbar-dropdown label="Gerenciar">
+      <b-navbar-dropdown label="GERENCIAR">
         <b-navbar-item>
           Meus produtos
         </b-navbar-item>
         <b-navbar-item>
-          Cateoria de produtos
+          Categoria de produtos
         </b-navbar-item>
         <b-navbar-item>
           Pedidos de vendas
@@ -27,7 +27,7 @@
           Meus Kits
         </b-navbar-item>
       </b-navbar-dropdown>
-      <b-navbar-dropdown label="Otimazar">
+      <b-navbar-dropdown label="OTIMIZAR">
         <b-navbar-item>
           Compras 
         </b-navbar-item>
@@ -35,14 +35,14 @@
           Produtos
         </b-navbar-item>
       </b-navbar-dropdown>
-      <b-navbar-dropdown label="Simular">
+      <b-navbar-dropdown label="SIMULAR">
         <b-navbar-item>
           Preços
         </b-navbar-item>
       </b-navbar-dropdown>
-      <b-navbar-dropdown label="Historico">
+      <b-navbar-dropdown label="HISTÓRICO">
       </b-navbar-dropdown>
-      <b-navbar-dropdown label="Configurar">
+      <b-navbar-dropdown label="CONFIGURAR">
         <b-navbar-item>
           Configurações basicas
         </b-navbar-item>

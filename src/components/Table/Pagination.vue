@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="mr-4">
-        <div class="control is-flex is-justify-content-space-around ">
+        <div class="control is-flex">
           <b-button
             :disabled='next == null ? true : false '
             size="is-small"
@@ -34,7 +34,7 @@
 
 <style scoped>
 .box-shadown{
-box-shadow: 0px -10px 10px -15px black;
+  box-shadow: 0px -10px 10px -15px black;
 }
 </style>
 
