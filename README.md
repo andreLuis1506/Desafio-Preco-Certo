@@ -92,6 +92,8 @@ As requisições foram feitas seguindo os monks dados
   "north_shipping": 25.9 // Frete Resto do Brasil
 }
 ```
+#### Screenshort do meu resultado
+![Screenshot do meu resultado](https://user-images.githubusercontent.com/57544105/132931166-8a5262e4-15ea-45b9-b833-bd2493af63ac.png)
 
 #### Como executar: 
 Para executar é bastante simples, você apenas precisa clona esse repositorio
