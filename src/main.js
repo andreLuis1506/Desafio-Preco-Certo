@@ -7,7 +7,7 @@ import Axios from 'axios'
 import './server'
 
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+import './assets/main.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 

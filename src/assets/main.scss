@@ -1,0 +1,27 @@
+$primary:#333F48;
+$black: #9FAAB2;
+$light: #F2F2F2;
+@import "~bulma/sass/utilities/_all";
+
+
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+
+$black-light: findLightColor($black);
+$black-dark: findDarkColor($black);
+$black-invert: findColorInvert($black);
+
+$light-light: findLightColor($light);
+$light-dark: findDarkColor($light);
+$light-invert: findColorInvert($light);
+
+
+
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
