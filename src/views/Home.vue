@@ -27,7 +27,7 @@
             </span>
           </p>
         </div>
-        <div class="column is-flex is-justify-content-center">
+        <div class="column is-flex">
           <b-dropdown aria-role="list" class="has-text-left">
             <template #trigger="{ active }">
               <b-button>
@@ -51,12 +51,12 @@
             <b-dropdown-item>Tipo dois</b-dropdown-item>
           </b-dropdown>       
         </div>
-        <div class="column">
+        <div class="column is-2">
           <b-field class="is-align-items-end">
             <b-checkbox class="is-size-6">Poduto com Prejuizo</b-checkbox>
           </b-field>
         </div>
-        <div class="column is-flex is-justify-content-flex-end">
+        <div class="column">
           <b-button class="is-flex" type="is-light">
             <font-awesome-icon icon="filter" />
             Filtrar
@@ -79,13 +79,12 @@
   border-top: hidden;
   border-left: hidden;
   border-right: hidden;
-  width: 90%;
+  width: 18rem;
   padding-bottom: 0.5rem;
   padding-left: 2rem;
 }
 .my-input:focus{
   box-shadow: 0 0 0 0;
-  /* border: 0 none; */
   outline: 0;
 }
 .search-icon {
