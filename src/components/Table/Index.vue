@@ -8,12 +8,12 @@
             <th class="has-text-white-ter"> 
               <input type="checkbox">
             </th>
-            <th class="has-text-white-ter">Cod</th>
-            <th class="has-text-white-ter">Produto</th>
-            <th class="has-text-white-ter">Custo</th>
-            <th class="has-text-white-ter">Frete</th>
-            <th class="has-text-white-ter">Margem</th>
-            <th class="has-text-white-ter">Custo final</th>
+            <Column name="Cod"/>
+            <Column name="Produto"/>
+            <Column name="Custo"/>
+            <Column name="Frete"/>
+            <Column name="Margem"/>
+            <Column name="Custo Final"/>
             <th class="has-text-white-ter"> </th>
           </tr>
         </thead>
@@ -40,11 +40,13 @@
 import TableRow from './TableRow'
 import Pagination from './Pagination'
 import Commission from './Commission.vue'
+import Column from './Column'
 export default {
   components: {
     TableRow,
     Pagination,
-    Commission
+    Commission,
+    Column
   },
   async created(){
     await this.fetchData()
