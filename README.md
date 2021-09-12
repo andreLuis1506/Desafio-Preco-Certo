@@ -3,7 +3,7 @@
 ## O Desafio
 #### Descrição:
 
-- Desenvolver o frontend do MVP de formação de preços de acordo com o protótipo abaixo:
+- Desenvolver o frontend do MVP de formação de preços de acordo com o protótipo:
 [Prototipo](https://xd.adobe.com/view/293ffc9d-bfbf-4d25-883c-fa27fa69d762-7c6c/screen/f39ba645-b03d-400f-aad9-68a3499eaa4a/)
 - Precisamos dar a visão de preço e margem de cada produto para o cliente que quer vender um produto na B2W.
 
@@ -93,7 +93,7 @@ As requisições foram feitas seguindo os monks dados
 }
 ```
 #### Screenshort do meu resultado
-![Screenshot do meu resultado](https://user-images.githubusercontent.com/57544105/132931166-8a5262e4-15ea-45b9-b833-bd2493af63ac.png)
+![Screenshot do meu resultado](https://user-images.githubusercontent.com/57544105/133001264-8737b789-4a78-4c5c-8f7d-0904c922b574.png)
 
 #### Como executar: 
 Para executar é bastante simples, você apenas precisa clona esse repositorio
@@ -109,4 +109,4 @@ E por ultimo, iniciar o servidor de desenvolvimento
 ```sh
 $ npm run serve
 ```
-
+A aplicação ficarar disponivel em: http://localhost:8080/
