@@ -40,6 +40,7 @@
 
 <script>
 export default {
-  name: 'pagination'
+  name: 'pagination',
+  props: ['total', 'next', 'previous']
 }
 </script>

@@ -22,7 +22,7 @@
         </tbody>
       </table>
     </div>  
-    <Pagination />
+    <Pagination :total="total" :next="next" :previous="previous" />
   </section>
 </template>
 
@@ -31,6 +31,7 @@
   position: sticky; 
   overflow: hidden;
   overflow-y: scroll;
+  overflow-x: scroll;
   max-height: 50vh;
 }
 </style>
