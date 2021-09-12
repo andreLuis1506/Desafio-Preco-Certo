@@ -9,7 +9,7 @@
     </th>
     <th>
       <p v-show="!isEditable" @click="isEditable = !isEditable" >R$ {{data.cost}}</p>
-      <input v-show="isEditable" type="number"  v-model="data.cost" @input="updateCost">
+      <input v-show="isEditable" type="number" v-model="data.cost" @input="updateCost">
     </th>
     <th>
       <p>

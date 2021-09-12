@@ -7,7 +7,6 @@
   </th>
 </template>
 
-
 <script>
 export default {
   name: 'column',

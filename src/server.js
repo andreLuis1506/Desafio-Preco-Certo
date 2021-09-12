@@ -59,7 +59,7 @@ new Server({
       const {cost} = JSON.parse(request.requestBody).data
 
       let newProduct = schema.db.products.find(id)
-      newProduct.cost = cost
+      newProduct.cost = Number.parseFloat(cost).toFixed(2)
 
       newProduct.price = Number.parseFloat(newProduct.cost) + Number.parseFloat(newProduct.north_shipping) 
       newProduct.price = Number.parseFloat(newProduct.price).toFixed(2)
